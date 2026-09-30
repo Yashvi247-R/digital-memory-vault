@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LockKeyhole, Sparkles } from "lucide-react";
 
 export default function Home() {
@@ -23,13 +24,19 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-            <button className="rounded-full bg-stone-900 px-7 py-3 font-medium text-white transition hover:bg-stone-700">
+            <Link
+              href="/register"
+              className="rounded-full bg-stone-900 px-7 py-3 font-medium text-white transition hover:bg-stone-700"
+            >
               Create Your Vault
-            </button>
+            </Link>
 
-            <button className="rounded-full border border-stone-300 bg-white px-7 py-3 font-medium text-stone-900 transition hover:bg-stone-100">
+            <Link
+              href="/login"
+              className="rounded-full border border-stone-300 bg-white px-7 py-3 font-medium text-stone-900 transition hover:bg-stone-100"
+            >
               Login
-            </button>
+            </Link>
           </div>
         </div>
       </section>
